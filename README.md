@@ -21,7 +21,7 @@ allprojects {
 	}
 ```
 ## Methods and how to use them
-1. Create an object for FetchData class, pass the URL as argument.
+1. Create an object for FetchData class, pass the URL as argument. Don't forget to import the class.
 ```
 FetchData fetchData = new FetchData("https://projects.vishnusivadas.com/AdvancedHttpURLConnection/readtest.php");
 ```
