@@ -1,0 +1,3 @@
+include ':Advanced_HttpURLConnection'
+include ':app'
+rootProject.name = "AdvancedHttpURLConnection"
