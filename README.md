@@ -20,7 +20,7 @@ allprojects {
  	implementation 'com.github.VishnuSivadasVS:Advanced-HttpURLConnection:1.0'
 	}
 ```
-* Methods and how to use them
+## Methods and how to use them
 1. Create an object for FetchData class, pass the URL as argument.
 ```
 FetchData fetchData = new FetchData("https://projects.vishnusivadas.com/AdvancedHttpURLConnection/readtest.php");
