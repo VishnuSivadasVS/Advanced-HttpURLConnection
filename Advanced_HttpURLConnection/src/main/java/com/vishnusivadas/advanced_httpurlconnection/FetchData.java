@@ -19,16 +19,15 @@ public class FetchData extends Thread {
 
     @Override
     public void run() {
-        Log.i("FetchData"+" State: ", "Start");
         try {
             URL url = new URL(this.url);
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
             InputStream inputStream = httpURLConnection.getInputStream();
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
             StringBuilder result = new StringBuilder();
-            String data;
-            while ((data = bufferedReader.readLine()) != null) {
-                result.append(data);
+            String result_line;
+            while ((result_line = bufferedReader.readLine()) != null) {
+                result.append(result_line);
             }
             bufferedReader.close();
             inputStream.close();
@@ -39,7 +38,7 @@ public class FetchData extends Thread {
         }
     }
 
-    public String getValue() {
+    public String getResult() {
         while (true) {
             if (!this.isAlive()) {
                 return this.getData();
