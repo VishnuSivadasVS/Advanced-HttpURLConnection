@@ -24,7 +24,8 @@ allprojects {
 ### Read Data From a URL - FetchData.class
 1. Create an object for FetchData class, pass the URL as argument. Don't forget to import the class.
 ```
-FetchData fetchData = new FetchData("https://projects.vishnusivadas.com/AdvancedHttpURLConnection/readTest.php");
+String URL = "https://projects.vishnusivadas.com/AdvancedHttpURLConnection/readTest.php";
+FetchData fetchData = new FetchData(URL);
 ```
 2. Start the fetching data.
 ```
@@ -54,7 +55,8 @@ String data = fetchData.getResult();
 	
 3. Create an object for PutData class, pass the URL as argument. Don't forget to import the class.
 ```
-PutData putData = new PutData("https://projects.vishnusivadas.com/AdvancedHttpURLConnection/putDataTest.php", "POST", param, data);
+String URL = "https://projects.vishnusivadas.com/AdvancedHttpURLConnection/putDataTest.php";
+PutData putData = new PutData(URL, "POST", param, data);
 ```
 
 4. Start the putData process.
