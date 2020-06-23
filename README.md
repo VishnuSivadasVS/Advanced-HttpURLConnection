@@ -21,9 +21,10 @@ allprojects {
 	}
 ```
 ## Methods and how to use them
+### Read Data From a URL - FetchData.class
 1. Create an object for FetchData class, pass the URL as argument. Don't forget to import the class.
 ```
-FetchData fetchData = new FetchData("https://projects.vishnusivadas.com/AdvancedHttpURLConnection/readtest.php");
+FetchData fetchData = new FetchData("https://projects.vishnusivadas.com/AdvancedHttpURLConnection/readTest.php");
 ```
 2. Start the fetching data.
 ```
@@ -31,7 +32,39 @@ fetchData.start();
 ```
 3. Get the result as string.
 ```
-String data = fetchData.getValue();
+String data = fetchData.getResult();
+```
+
+### Write data with POST and GET methods - PutData.class
+1. Creating array for parameters
+   ```
+   String[] param = new String[2];
+   param[0] = "param-1";
+   param[1] = "param-2";
+   ```
+   _Use any parameter name that you like._
+   
+2. Creating array for data
+   ```
+   String[] data = new String[2];
+   data[0] = "data-1";
+   data[1] = "data-2";
+   ```
+   _Add as many as data and parameters as you like. Make sure number of parameters is equal to number of data. Also add then in exact order._
+	
+3. Create an object for PutData class, pass the URL as argument. Don't forget to import the class.
+```
+PutData putData = new PutData("https://projects.vishnusivadas.com/AdvancedHttpURLConnection/putDataTest.php", "POST", param, data);
+```
+
+4. Start the putData process.
+```
+putData.start();
+```
+
+5. Get the result as string.
+```
+String data = putData.getResult();
 ```
 
 This is just like a pre-release version there are lot of other features coming soon.
