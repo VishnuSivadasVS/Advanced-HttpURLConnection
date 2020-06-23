@@ -51,7 +51,7 @@ String data = fetchData.getResult();
    data[0] = "data-1";
    data[1] = "data-2";
    ```
-   _Add as many as data and parameters as you like. Make sure number of parameters is equal to number of data. Also add then in exact order._
+   _Add as many as data and parameters as you like. Make sure number of parameters is equal to number of data. Also add them in exact order._
 	
 3. Create an object for PutData class, pass the URL as argument. Don't forget to import the class.
 ```
