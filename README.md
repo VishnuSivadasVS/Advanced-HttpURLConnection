@@ -5,15 +5,15 @@
 Making HttpURLConnection easy and secure. Best mesthod to impliment httpurlconnection in android.
 
 ```
-	allprojects {
-		repositories {
-			maven { url 'https://jitpack.io' }
-		}
+allprojects {
+	repositories {
+		maven { url 'https://jitpack.io' }
 	}
-  ```
+}
+```
   
-  ```
-  dependencies {
-	        implementation 'com.github.VishnuSivadasVS:Advanced-HttpURLConnection:1.0'
+ ```
+ dependencies {
+ 	implementation 'com.github.VishnuSivadasVS:Advanced-HttpURLConnection:1.0'
 	}
-  ```
+ ```
