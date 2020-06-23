@@ -21,6 +21,7 @@ allprojects {
 	}
 ```
 ## Methods and how to use them
+We have Two classes FetchData and PutData. Import the Library to your file first (In android studio paste the code and press alt + enter).
 ### Read Data From a URL - FetchData.class
 1. Create an object for FetchData class, pass the URL as argument. Don't forget to import the class.
 ```
