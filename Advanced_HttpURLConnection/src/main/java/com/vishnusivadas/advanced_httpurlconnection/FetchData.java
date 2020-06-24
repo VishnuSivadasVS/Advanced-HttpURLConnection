@@ -1,7 +1,5 @@
 package com.vishnusivadas.advanced_httpurlconnection;
 
-import android.util.Log;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -10,7 +8,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class FetchData extends Thread {
-    private String url;
+    public String url;
     String data = "Empty";
 
     public FetchData(String url) {
@@ -38,12 +36,21 @@ public class FetchData extends Thread {
         }
     }
 
-    public String getResult() {
+    public boolean startFetch() {
+        FetchData.this.start();
+        return true;
+    }
+
+    public boolean onComplete() {
         while (true) {
             if (!this.isAlive()) {
-                return this.getData();
+                return true;
             }
         }
+    }
+
+    public String getResult() {
+        return this.getData();
     }
 
     public void setData(String data) {

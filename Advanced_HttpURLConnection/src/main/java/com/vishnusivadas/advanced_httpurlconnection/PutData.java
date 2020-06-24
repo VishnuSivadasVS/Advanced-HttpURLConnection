@@ -60,12 +60,21 @@ public class PutData extends Thread {
         }
     }
 
-    public String getResult() {
+    public boolean startFetch() {
+        PutData.this.start();
+        return true;
+    }
+
+    public boolean onComplete() {
         while (true) {
             if (!this.isAlive()) {
-                return this.getData();
+                return true;
             }
         }
+    }
+
+    public String getResult() {
+        return this.getData();
     }
 
     public void setData(String result_data) {
