@@ -19,7 +19,7 @@ allprojects {
 * Add the dependency
 ```
  dependencies {
- 	implementation 'com.github.VishnuSivadasVS:Advanced-HttpURLConnection:1.1'
+ 	implementation 'com.github.VishnuSivadasVS:Advanced-HttpURLConnection:1.2'
 	}
 ```
 ## Methods and how to use them
@@ -67,9 +67,9 @@ You need to use Handler and post a Runnable. Inside the run method add the code 
 
 * First we need to create to arrays, one for field name of the parameter and another for the data. Make sure the order is correct.
 ```
-String[] param = new String[2];
-param[0] = "param-1";
-param[1] = "param-2";
+String[] field = new String[2];
+field[0] = "param-1";
+field[1] = "param-2";
 String[] data = new String[2];
 data[0] = "data-1";
 data[1] = "data-2";
@@ -82,11 +82,11 @@ $_POST['param-2'] = "data-2";
 
 * Creating the object for PutData, pass the URL, method, field, data as arguments. The method can be POST and also GET.
 ```
-PutData putData = new PutData("https://projects.vishnusivadas.com/AdvancedHttpURLConnection/putDataTest.php", "POST", param, data);
+PutData putData = new PutData("https://projects.vishnusivadas.com/AdvancedHttpURLConnection/putDataTest.php", "POST", field, data);
 ```
 * Calling startFetch() for starting the process, it returns a boolean value.
 ```
-putData.startFetch();
+putData.startPut();
 ```
 * To know when the process is completes use onComplete() which returns a boolean value.
 ```
@@ -105,15 +105,15 @@ handler.post(new Runnable() {
     public void run() {
         //Starting Write and Read data with URL
         //Creating array for parameters
-        String[] param = new String[2];
-        param[0] = "param-1";
-        param[1] = "param-2";
+        String[] field = new String[2];
+        field[0] = "param-1";
+        field[1] = "param-2";
         //Creating array for data
         String[] data = new String[2];
         data[0] = "data-1";
         data[1] = "data-2";
-        PutData putData = new PutData("https://projects.vishnusivadas.com/AdvancedHttpURLConnection/putDataTest.php", "POST", param, data);
-        if (putData.startFetch()) {
+        PutData putData = new PutData("https://projects.vishnusivadas.com/AdvancedHttpURLConnection/putDataTest.php", "POST", field, data);
+        if (putData.startPut()) {
             if (putData.onComplete()) {
                 String result = putData.getResult();
                 //End ProgressBar (Set visibility to GONE)
