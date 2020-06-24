@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                         String[] data = new String[2];
                         data[0] = "data-1";
                         data[1] = "data-2";
-                        PutData putData = new PutData("https://projects.vishnusivadas.com/AdvancedHttpURLConnection/putDataTest.php", "GET", param, data);
+                        PutData putData = new PutData("https://projects.vishnusivadas.com/AdvancedHttpURLConnection/putDataTest.php", "POST", param, data);
                         if (putData.startPut()) {
                             if (putData.onComplete()) {
                                 String result = putData.getResult();
