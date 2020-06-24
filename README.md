@@ -4,6 +4,8 @@
 
 Making HttpURLConnection easy and secure. Best method to impliment httpurlconnection in android.
 
+* [Download demo apk and see how it works.](https://github.com/VishnuSivadasVS/Advanced-HttpURLConnection/releases/download/1.1/AdvancedHttpUrlConnection-debug.apk)
+
 ## Steps to add the library to your project.
 
 * Add it in your root build.gradle at the end of repositories:
