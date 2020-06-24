@@ -17,7 +17,7 @@ allprojects {
 * Add the dependency
 ```
  dependencies {
- 	implementation 'com.github.VishnuSivadasVS:Advanced-HttpURLConnection:1.0'
+ 	implementation 'com.github.VishnuSivadasVS:Advanced-HttpURLConnection:1.1'
 	}
 ```
 ## Methods and how to use them
