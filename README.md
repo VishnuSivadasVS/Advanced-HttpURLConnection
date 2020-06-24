@@ -24,6 +24,7 @@ allprojects {
 We have Two classes FetchData and PutData. Import the Library to your file first (In android studio paste the code and press alt + enter).
 ### Read Data From a URL - FetchData.class
 ```
+//Start ProgressBar first (Set visibility VISIBLE)
 Handler handler = new Handler();
 handler.post(new Runnable() {
     @Override
@@ -32,6 +33,7 @@ handler.post(new Runnable() {
         if (fetchData.startFetch()) {
             if (fetchData.onComplete()) {
                 String result = fetchData.getResult();
+		//End ProgressBar (Set visibility to GONE)
                 Log.i("FetchData", result);
             }
         }
@@ -41,6 +43,7 @@ handler.post(new Runnable() {
 
 ### Write data with POST and GET methods - PutData.class
 ```
+//Start ProgressBar first (Set visibility VISIBLE)
 Handler handler = new Handler();
 handler.post(new Runnable() {
     @Override
@@ -58,8 +61,7 @@ handler.post(new Runnable() {
         if (putData.startFetch()) {
             if (putData.onComplete()) {
                 String result = putData.getResult();
-                progressBar.setVisibility(View.GONE);
-                textView.setText(result);
+                //End ProgressBar (Set visibility to GONE)
                 Log.i("PutData", result);
             }
         }
