@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
                         data[0] = "data-1";
                         data[1] = "data-2";
                         PutData putData = new PutData("https://projects.vishnusivadas.com/AdvancedHttpURLConnection/putDataTest.php", "GET", param, data);
-                        if (putData.startFetch()) {
+                        if (putData.startPut()) {
                             if (putData.onComplete()) {
                                 String result = putData.getResult();
                                 progressBar.setVisibility(View.GONE);

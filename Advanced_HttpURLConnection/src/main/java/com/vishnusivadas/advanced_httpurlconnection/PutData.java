@@ -60,7 +60,7 @@ public class PutData extends Thread {
         }
     }
 
-    public boolean startFetch() {
+    public boolean startPut() {
         PutData.this.start();
         return true;
     }
