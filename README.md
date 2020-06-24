@@ -25,6 +25,25 @@ allprojects {
 ## Methods and how to use them
 We have Two classes FetchData and PutData. Import the Library to your file first (In android studio paste the code and press alt + enter).
 ### Read Data From a URL - FetchData.class
+You need to use Handler and post a Runnable. Inside the run method add the code for FetchData.
+
+* Creating the object for FetchData.
+```
+FetchData fetchData = new FetchData("https://projects.vishnusivadas.com/AdvancedHttpURLConnection/readTest.php");
+```
+* Calling startFetch() returns a boolean value.
+```
+fetchData.startFetch();
+```
+* To know when the process is completes use onComplete() which returns a boolean value.
+```
+fetchData.onComplete();
+```
+* If the process is complete, use the getResult() to get the result value.
+```
+fetchData.getResult();
+```
+* Full implimentation with Handler. You can also add a progress bar at the commended regions.
 ```
 //Start ProgressBar first (Set visibility VISIBLE)
 Handler handler = new Handler();
