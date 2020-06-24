@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">AdvancedHttpURLConnection</string>
-    <string name="data">Fetching Data</string>
+    <string name="data">Result Text</string>
     <string name="fetch_data">Fetch Data</string>
     <string name="put_data">Put Data</string>
+    <string name="github_vishnusivadasvs">GitHub.com/VishnuSivadasVS</string>
 </resources>

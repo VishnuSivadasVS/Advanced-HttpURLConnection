@@ -60,14 +60,14 @@ public class MainActivity extends AppCompatActivity {
                     public void run() {
                         //Starting Write and Read data with URL
                         //Creating array for parameters
-                        String[] param = new String[2];
-                        param[0] = "param-1";
-                        param[1] = "param-2";
+                        String[] field = new String[2];
+                        field[0] = "param-1";
+                        field[1] = "param-2";
                         //Creating array for data
                         String[] data = new String[2];
                         data[0] = "data-1";
                         data[1] = "data-2";
-                        PutData putData = new PutData("https://projects.vishnusivadas.com/AdvancedHttpURLConnection/putDataTest.php", "POST", param, data);
+                        PutData putData = new PutData("https://projects.vishnusivadas.com/AdvancedHttpURLConnection/putDataTest.php", "POST", field, data);
                         if (putData.startPut()) {
                             if (putData.onComplete()) {
                                 String result = putData.getResult();

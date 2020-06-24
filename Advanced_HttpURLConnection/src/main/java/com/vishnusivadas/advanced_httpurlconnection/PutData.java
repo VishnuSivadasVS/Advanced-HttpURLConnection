@@ -14,14 +14,14 @@ import java.net.URLEncoder;
 public class PutData extends Thread {
     private String url, method;
     String result_data = "Empty";
-    String[] data, param;
+    String[] data, field;
 
-    public PutData(String url, String method, String[] param, String[] data) {
+    public PutData(String url, String method, String[] field, String[] data) {
         this.url = url;
         this.method = method;
         this.data = new String[data.length];
-        this.param = new String[param.length];
-        System.arraycopy(param, 0, this.param, 0, param.length);
+        this.field = new String[field.length];
+        System.arraycopy(field, 0, this.field, 0, field.length);
         System.arraycopy(data, 0, this.data, 0, data.length);
     }
 
@@ -37,8 +37,8 @@ public class PutData extends Thread {
             OutputStream outputStream = httpURLConnection.getOutputStream();
             BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, UTF8));
             StringBuilder post_data = new StringBuilder();
-            for (int i = 0; i < this.param.length; i++) {
-                post_data.append(URLEncoder.encode(this.param[i], "UTF-8")).append("=").append(URLEncoder.encode(this.data[i], UTF8)).append("&");
+            for (int i = 0; i < this.field.length; i++) {
+                post_data.append(URLEncoder.encode(this.field[i], "UTF-8")).append("=").append(URLEncoder.encode(this.data[i], UTF8)).append("&");
             }
             bufferedWriter.write(post_data.toString());
             bufferedWriter.flush();
