@@ -2,7 +2,7 @@
 [![](https://jitpack.io/v/VishnuSivadasVS/Advanced-HttpURLConnection.svg)](https://jitpack.io/#VishnuSivadasVS/Advanced-HttpURLConnection)
 [![Vishnu Sivadas](https://www.vishnusivadas.com/github/codequality.svg?style=flat)](https://github.com/VishnuSivadasVS)
 
-Making HttpURLConnection easy and secure. Best method to impliment httpurlconnection in android.
+Making HttpURLConnection faster, easy and secure. Best method to impliment httpurlconnection in android.
 
 * [Download demo apk and see how it works.](https://github.com/VishnuSivadasVS/Advanced-HttpURLConnection/releases/download/1.2/AdvancedHttpUrlConnection-debug.apk)
 
