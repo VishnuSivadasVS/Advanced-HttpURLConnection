@@ -46,7 +46,7 @@ fetchData.getResult();
 * Full implimentation with Handler. You can also add a progress bar at the commended regions.
 ```
 //Start ProgressBar first (Set visibility VISIBLE)
-Handler handler = new Handler();
+Handler handler = new Handler(Looper.getMainLooper());
 handler.post(new Runnable() {
     @Override
     public void run() {
@@ -99,7 +99,7 @@ putData.getResult();
 * Full implimentation with Handler. You can also add a progress bar at the commended regions.
 ```
 //Start ProgressBar first (Set visibility VISIBLE)
-Handler handler = new Handler();
+Handler handler = new Handler(Looper.getMainLooper());
 handler.post(new Runnable() {
     @Override
     public void run() {
