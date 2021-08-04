@@ -22,9 +22,8 @@ allprojects {
 	}
 ```
 
-```diff
 - If you are facing issue with sync just go to file, invalidate cache and restart. Also try clearing the build and rebuild the project.
-```
+
 
 ## Methods and how to use them
 We have Two classes FetchData and PutData. Import the Library to your file first (In android studio paste the code and press alt + enter).
