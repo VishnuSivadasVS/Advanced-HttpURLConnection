@@ -7,6 +7,21 @@ Making HttpURLConnection faster, easy and secure. Best method to impliment httpu
 
 ## Steps to add the library to your project.
 
+* Artic Fox update only add this
+Add maven { url "https://jitpack.io" } to settings.gradle file
+```
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        jcenter() // Warning: this repository is going to shut down soon
+        maven { url "https://jitpack.io" }
+    }
+}
+```
+
+## For old Android studio versions except Artic Fox
 * Add it in your root build.gradle at the end of repositories:
 ```
 allprojects {
@@ -44,6 +59,8 @@ task clean(type: Delete) {
     delete rootProject.buildDir
 }
 ```
+
+## For both Artic fox update and old versions
 * Add the dependency
 ```
  dependencies {
