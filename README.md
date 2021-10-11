@@ -62,7 +62,8 @@ task clean(type: Delete) {
 }
 ```
 
-## For both Artic fox update and old versions
+# For both Artic fox update and old versions
+
 * Add the dependency
 ```
  dependencies {
