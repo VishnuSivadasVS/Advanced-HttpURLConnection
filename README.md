@@ -7,6 +7,9 @@ Making HttpURLConnection faster, easy and secure. Best method to impliment httpu
 
 # Steps to add the library to your project.
 
+Just add jitpack to you project, in recent updates of android studio you might face errors. If yes try the 2 methods and also try googing "how to add jitpack to android studio version ---". If you need more help comment on our youtube channel [https://youtube.com/codeseasy](https://youtube.com/codeseasy)
+
+
 ## Adding jitpack to you project.
 
 * Add it in your root build.gradle at the end of repositories:
