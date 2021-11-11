@@ -63,7 +63,7 @@ dependencyResolutionManagement {
 
 
 
-* Add the dependency
+# Add the dependency
 ```
  dependencies {
  	implementation 'com.github.VishnuSivadasVS:Advanced-HttpURLConnection:1.2'
