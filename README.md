@@ -5,7 +5,9 @@ Making HttpURLConnection faster, easy and secure. Best method to impliment httpu
 
 * [Download demo apk and see how it works.](https://github.com/VishnuSivadasVS/Advanced-HttpURLConnection/releases/download/1.2/AdvancedHttpUrlConnection-debug.apk)
 
-## Steps to add the library to your project.
+# Steps to add the library to your project.
+
+## Adding jitpack to you project.
 
 * Add it in your root build.gradle at the end of repositories:
 ```
@@ -63,7 +65,7 @@ dependencyResolutionManagement {
 
 
 
-# Add the dependency
+# Adding the library dependency
 ```
  dependencies {
  	implementation 'com.github.VishnuSivadasVS:Advanced-HttpURLConnection:1.2'
