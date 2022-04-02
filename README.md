@@ -15,10 +15,13 @@ Just add jitpack to you project, in recent updates of android studio you might f
 * Add it in your root build.gradle at the end of repositories:
 ```
 allprojects {
-	repositories {
-		maven { url 'https://jitpack.io' }
-	}
-}
+        repositories {
+           google()
+           jcenter()
+           mavenCentral()
+           maven { url "https://jitpack.io" }
+        }
+    }
 ```
 ### Example of root gradle file
 ```
@@ -29,21 +32,20 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:4.2.2"
+        classpath "com.android.tools.build:gradle:7.0.4"
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
-}
-
-allprojects {
+    allprojects {
         repositories {
-           google()
-           jcenter()
-           mavenCentral()
-           maven { url "https://jitpack.io" }
+            google()
+            jcenter()
+            mavenCentral()
+            maven { url "https://jitpack.io" }
         }
     }
+}
 
 task clean(type: Delete) {
     delete rootProject.buildDir
@@ -51,9 +53,9 @@ task clean(type: Delete) {
 ```
 
 
-## Try this if you find error with previous way. 
-
-Add the following to settings.gradle file
+# Delete dependencyResolutionManagement from setting.gradle
+For new android studio version you have to do this.
+Remove these lines, everything inside the dependencyResolutionManagement
 ```
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
@@ -61,11 +63,9 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         jcenter() // Warning: this repository is going to shut down soon
-        maven { url "https://jitpack.io" }
     }
 }
 ```
-
 
 
 # Adding the library dependency
