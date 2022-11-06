@@ -12,61 +12,18 @@ Just add jitpack to you project, in recent updates of android studio you might f
 
 ## Adding jitpack to you project.
 
-* Add it in your root build.gradle at the end of repositories:
-```
-allprojects {
-        repositories {
-           google()
-           jcenter()
-           mavenCentral()
-           maven { url "https://jitpack.io" }
-        }
-    }
-```
-### Example of root gradle file
-```
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
-buildscript {
-    repositories {
-        google()
-        mavenCentral()
-    }
-    dependencies {
-        classpath "com.android.tools.build:gradle:7.0.4"
-
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
-    }
-    allprojects {
-        repositories {
-            google()
-            jcenter()
-            mavenCentral()
-            maven { url "https://jitpack.io" }
-        }
-    }
-}
-
-task clean(type: Delete) {
-    delete rootProject.buildDir
-}
-```
-
-
-# Delete dependencyResolutionManagement from setting.gradle
-For new android studio version you have to do this.
-Remove these lines, everything inside the dependencyResolutionManagement
+* Go to Gradle Srcipts section and open settings.gradle file:
+* Add maven { url "https://jitpack.io" } to the file like below
 ```
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
         mavenCentral()
-        jcenter() // Warning: this repository is going to shut down soon
+        maven { url "https://jitpack.io" }
     }
 }
 ```
-
 
 # Adding the library dependency
 ```
